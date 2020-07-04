@@ -1,0 +1,13 @@
+@charset "utf-8";
+
+$yellow: #ffe006;
+$black: #3c3c3b;
+$white: #ffffff;
+//$blue:
+$link: $black;
+$title-color: $yellow;
+$modal-card-head-background-color: $black !default;
+$modal-card-title-color: $white;
+//$border: $yellow;
+
+@import "~bulma/bulma";
