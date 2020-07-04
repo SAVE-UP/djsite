@@ -1,0 +1,26 @@
+version: 2.1
+
+orbs:
+  node: circleci/node@1.1.6
+
+executors:
+  node:
+    docker:
+      - image: circleci/node
+    environment:
+
+jobs:
+  front:
+    executor: node
+    steps:
+      - checkout
+      - node/with-cache:
+          cache-key: front/package.json
+          steps:
+            - run: "cd front; npm i"
+            - run: "cd front; npm run test"
+
+workflows:
+  front:
+    jobs:
+      - front
